@@ -29,7 +29,7 @@ export default function Headerindex () {
                 
                 <Link href="/login" >
                     <a className={styles["btnlogin"]}>
-                        <img srcSet="/assets/Icon/user.svg" id={styles["icon"]} />
+                        <img srcSet="/assets/Icon/user.svg" id={styles["icon"] alt="Login"} />
                     </a>
                 </Link>
                 
@@ -44,7 +44,7 @@ export default function Headerindex () {
 
             </div>
 
-            <button onClick={toogleSidebar} className={styles["menu"]}><img srcSet="/assets/Icon/abrir.svg" id={styles.icon} /></button>
+            <button onClick={toogleSidebar} className={styles["menu"]}><img srcSet="/assets/Icon/abrir.svg" id={styles.icon} alt="Menu" /></button>
 
             <Sidebar show={sidebarShow} toogleSidebar={toogleSidebar}/>
 

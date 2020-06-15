@@ -17,6 +17,8 @@ export default function Header () {
         <Head>
             <link rel="shortcut icon" href="/favicon.svg" />
             <title>Fitness Trainning</title>
+            <meta name="description" content="Academia especializada em treinamento funcional. Yoga, Musculação, Crossfit e muitas outras modalidades" />
+            <meta property="og:locale" content="pt_BR" />
         </Head>
         <header>
             <Link  href="/">
@@ -29,7 +31,7 @@ export default function Header () {
                 
                 <Link href="/login" >
                     <a className={styles["btnlogin"]}>
-                        <img srcSet="/assets/Icon/user.svg" id={styles.icon} />
+                        <img srcSet="/assets/Icon/user.svg" id={styles.icon} alt="Login"/>
                     </a>
                 </Link>
                 
@@ -44,7 +46,7 @@ export default function Header () {
                 </ul>
             </div>
 
-            <button onClick={toogleSidebar} className={styles["menu"]}><img srcSet="/assets/Icon/abrir.svg" id={styles.icon} /></button>
+            <button onClick={toogleSidebar} className={styles["menu"]}><img srcSet="/assets/Icon/abrir.svg" id={styles.icon} alt="Abrir" /></button>
 
             <Sidebar show={sidebarShow} toogleSidebar={toogleSidebar}/>
 

@@ -1,3 +1,3 @@
-const serverUrl = 'http://localhost:3333'
+const serverUrl = 'https://academiafitnestraining.herokuapp.com'
 
 export default serverUrl

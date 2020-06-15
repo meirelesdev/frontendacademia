@@ -13,6 +13,7 @@ import Link from 'next/link'
 
 
 export default function Login() {
+
     const Router = useRouter()
     const cookies = new Cookies();
     const cookiesUser = new Cookies();
@@ -31,19 +32,28 @@ export default function Login() {
         await axios.post(`${serverUrl}/auths`, values)
             .then(
                 (res) => {
-                    const tokenData = res.data.token
+                    cookies.remove('token')
+                    cookies.remove('user')
+                    cookies.remove('typet')
+                    cookies.remove('name_training')
+                    cookies.remove('description')
+                    const { token } = res.data.token
                     const user = res.data.user["name"]
                     const typet = res.data.user["type_training"]
                     const isAdmin = res.data.user.isAdmin
-                    cookies.set('token', tokenData)
+                    cookies.set('token', token)
                     cookiesUser.set('user', user)
                     cookiesType.set('typet', typet)
                     switch (isAdmin) {
                         case 0:
                             axios.get(`${serverUrl}/trainings/${typet}`).then((res) => {
-                                const resposta = res.data
-                                const cookiesInfo = new Cookies();
-                                cookiesInfo.set('treinos', resposta)
+    
+                                const description = res.data[0].description
+                                const nametraining = res.data[0].name_training
+                                const cookiesName = new Cookies();
+                                cookiesName.set('name_training', nametraining)
+                                const cookiesDesc = new Cookies();
+                                cookiesName.set('description', description)
                             })
                             Router.push("/studentAreaTable")
                             // window.location.href = ("/studentAreaTable")
