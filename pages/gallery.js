@@ -48,7 +48,7 @@ export default function Gallery({ photos }) {
     )
 }
 
-export async function  getStaticProps( ctx ){
+Gallery.getInitialProps = async ( ctx )=>{
     let res = {}
     try{
         res = await axios.get(`${serverUrl}/gallery`)    

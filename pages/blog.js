@@ -47,7 +47,7 @@ export default function  Blog({ posts }) {
     )
     
 }
-export async function getStaticProps( ){
+Blog.getInitialProps = async (ctx ) => {
     let res = []
     try{
         res = await axios.get(`${serverUrl}/posts`)
