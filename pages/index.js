@@ -41,7 +41,7 @@ export default function Index({ posts }) {
                     <p>temos o objetivo de prepará-lo para todos os desafios físicos da vida!</p>
                 </div>
 
-                <img id={styles["fundoblog"]} src="assets/Images/pesosbola.jpg"/>
+                <img id={styles["fundoblog"]} src="assets/Images/pesosbola.jpg" alt="Blog" />
             </div>
 
             <div className={styles["blog"]}>
@@ -62,7 +62,7 @@ export default function Index({ posts }) {
                     </div>
                 </div>
     ))}
-            </section>: <img id={styles.fundoblog} src="assets/Images/fundoblog.jpg"/>}
+            </section>: <img id={styles.fundoblog} src="assets/Images/fundoblog.jpg" alt="Blog"/>}
             </div>
 
             <div className={styles["nossosplanos"]}>
@@ -74,14 +74,14 @@ export default function Index({ posts }) {
                 </p>
                 <Link href="/planos"><a className={styles["leiamaisbotao"]}>Leia mais +</a></Link>
                 <div id={styles["imagens"]}>
-                    <img id={styles["mapa"]} src="assets/Images/mapa.jpg"/>
-                    <img id={styles["mulher"]} src="assets/Images/mulherforte.jpg"/>
+                    <img id={styles["mapa"]} src="assets/Images/mapa.jpg" alt="Mapa"/>
+                    <img id={styles["mulher"]} src="assets/Images/mulherforte.jpg" alt="Mulher na Academia" />
                 </div>
             </div>
 
             <div className={styles["blogs"]}>
                 <div className={styles["itemblog"]}>
-                    <img id={styles["fundoblogmateria"]} src="assets/Images/blog1.jpg" alt="fundomateria"/>
+                    <img id={styles["fundoblogmateria"]} src="assets/Images/blog1.jpg" alt="fundomateria" />
                     <h1>Performace nos TREINOS</h1>
                     <div id={styles["paragrafo"]}>
                         <p>Com uma equipe enchuta de CrossFit e com Fortes</p>
