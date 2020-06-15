@@ -29,7 +29,7 @@ export default function Headerindex () {
                 
                 <Link href="/login" >
                     <a className={styles["btnlogin"]}>
-                        <img srcSet="/assets/Icon/user.svg" id={styles["icon"] alt="Login"} />
+                        <img srcSet="/assets/Icon/user.svg" id={styles["icon"] } alt="Login" />
                     </a>
                 </Link>
                 
