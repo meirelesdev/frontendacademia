@@ -54,9 +54,5 @@ Blog.getInitialProps = async (ctx ) => {
     }catch(err){
         res.data = []
     }   
-    return { 
-        props :{
-            posts: res.data
-        }
-    }
+    return { posts: res.data}
 }
