@@ -56,8 +56,4 @@ Gallery.getInitialProps = async ( ctx )=>{
          res.data =  [] 
     }  
     return { photos: res.data }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 22de84cc5aad089fc0a279685ce012ee073d20ec
