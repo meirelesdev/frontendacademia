@@ -55,9 +55,5 @@ Gallery.getInitialProps = async ( ctx )=>{
     }catch(err){
          res.data =  [] 
     }  
-    return { 
-        props: {
-            photos: res.data
-        }
-    }
+    return { photos: res.data }
 }
