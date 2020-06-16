@@ -8,7 +8,7 @@ import CompImg from '../components/CompImg'
 import Link from 'next/link'
 
 
-export default function  Blog({ posts }) {
+export default function  Blog( posts ) {
         
     return(
         <>
@@ -54,9 +54,5 @@ Blog.getInitialProps = async (ctx ) => {
     }catch(err){
         res.data = []
     }   
-    return { 
-        props :{
-            posts: res.data
-        }
-    }
+    return { posts: res.data }
 }

@@ -8,7 +8,7 @@ import CompImg from '../components/CompImg'
 import styles from '../components/Gallery.module.css'
 
 
-export default function Gallery({ photos }) {
+export default function Gallery( photos ) {
 
     return(
         <>
@@ -55,9 +55,5 @@ Gallery.getInitialProps = async ( ctx )=>{
     }catch(err){
          res.data =  [] 
     }  
-    return { 
-        props: {
-            photos: res.data
-        }
-    }
+    return { photos: res.data }
 }
