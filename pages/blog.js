@@ -54,10 +54,5 @@ Blog.getInitialProps = async (ctx ) => {
     }catch(err){
         res.data = []
     }   
-<<<<<<< HEAD
-    return { posts: res.data }
-}
-=======
     return { posts: res.data}
 }
->>>>>>> 22de84cc5aad089fc0a279685ce012ee073d20ec
